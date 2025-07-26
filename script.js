@@ -52,7 +52,7 @@ const getShows = (shows) => {
         }
     }
     if(!found) {
-        console.log('No movies found');
+        //create a div and not found heading inside the container
         const div = document.createElement('div');
         const notFound = document.createElement('h2');
         notFound.textContent = 'No Shows Found :(';
