@@ -1,0 +1,109 @@
+body {
+    background-color: #333;
+    color: white;
+    font-family: "Roboto Mono", monospace;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+h1 {
+    text-align: center;
+}
+
+#searchForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+ #searchForm input {
+    width: 75%;
+    height: 3rem;
+    font-size: 2rem;
+    border-radius: 1rem;
+    border: none;
+    background-color: #00000000;
+    outline: 1px solid yellow;
+    color: white;
+    text-align: center;
+}
+
+#searchForm button {
+    font-size: 1rem;
+    border: none;
+    border-radius: 0.8rem;
+    padding: 7px 15px;
+    background-color: transparent;
+    outline: 1px solid yellow;
+    color: white;
+}
+
+#searchForm button:hover {
+    color: black;
+    background-color: yellow;
+    cursor: pointer;
+}
+
+img {
+    border-radius: 0.3rem;
+    width: 210px;
+    height: 295px;
+}
+
+.container {
+    width: 80%;
+    margin: 2rem auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+
+.showDiv {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(171, 162, 162);
+    border-radius: 0.5rem;
+    padding: 20px;
+    padding-bottom: 0;
+    max-width: min-content;
+    background-color: black;
+}
+
+.showDiv:hover {
+    cursor: pointer;
+}
+
+.movie {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10px;
+    gap: 5px;
+}
+
+.movie-title {
+    font-size: 1rem;
+}
+
+.movie-rating {
+    border: .5px solid yellow;
+    border-radius: 0.7rem;
+    padding: 5px 10px;
+    font-size: 0.7rem;
+    display: flex;
+    align-items: center;
+}
+
+.fa-star {
+    color: yellow;
+    margin-right: 1px;
+}
