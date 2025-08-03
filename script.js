@@ -3,11 +3,13 @@ const container = document.querySelector('.container');
 
 form.addEventListener('submit', async function (e) {
     deleteShows();
+    showLoading();
     e.preventDefault();
     const searchTerm = this.elements.query.value;
     const config = { params: { q: searchTerm } }
     const res = await axios.get(`https://api.tvmaze.com/search/shows`, config);
     getShows(res.data);
+    clearLoading();
     this.elements.query.value = '';
 })
 
@@ -27,6 +29,7 @@ const getShows = (shows) => {
             // Add show image and appending to showDiv
             const img = document.createElement('IMG');
             img.src = result.show.image.medium;
+            img.loading = 'lazy';
             showDiv.append(img);
 
             // Add movie info container and appending to showDiv
@@ -65,4 +68,18 @@ const getShows = (shows) => {
 
 const deleteShows = () => {
     container.innerHTML = '';
+}
+
+const showLoading = () => {
+    const p = document.createElement('p');
+    p.innerText = "Loading";
+    p.style.textAlign = 'center';
+    container.appendChild(p);
+}
+
+const clearLoading = () => {
+    const p = document.querySelector('p');
+    if(container.contains(p)) {
+        p.remove();
+    }
 }
